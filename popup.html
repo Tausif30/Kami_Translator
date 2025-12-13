@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kami Translator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #a65ceb 0%, #5f1ca0 100%);
+    }
+
+    .container {
+      background: white;
+      padding: 24px;
+      border-radius: 8px;
+      margin: 8px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #5f1ca0;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 12px;
+      max-width: 96px;
+    }
+
+    .language-section {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .language-display {
+      padding: 12px;
+      background: linear-gradient(135deg, #a65ceb15 0%, #5f1ca015 100%);
+      border: 2px solid #a65ceb;
+      border-radius: 6px;
+      font-size: 15px;
+      color: #5f1ca0;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+      background: white;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #a65ceb;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #a65ceb 0%, #5f1ca0 100%);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(166, 92, 235, 0.4);
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(166, 92, 235, 0.5);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .status {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      text-align: center;
+      display: none;
+    }
+
+    .status.show {
+      display: block;
+    }
+
+    .status.success {
+      background: #f0fff4;
+      border: 1px solid #86efac;
+      color: #166534;
+    }
+
+    .status.error {
+      background: #fee;
+      border: 1px solid #fcc;
+      color: #d13438;
+    }
+
+    .status.info {
+      background: #eff6ff;
+      border: 1px solid #93c5fd;
+      color: #1e40af;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #ddd, transparent);
+      margin: 20px 0;
+    }
+
+    .restore-btn {
+      margin-top: 12px;
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
+      display: none;
+    }
+
+    .restore-btn.show {
+      display: block;
+    }
+
+    .icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="icon.png" alt="Kami Translator" class="logo">
+    <h1>Kami Translator</h1>
+    
+    <div class="language-section">
+      <label>Page Language:</label>
+      <div class="language-display" id="originalLang">Detecting...</div>
+    </div>
+
+    <div class="language-section">
+      <label>Translate to:</label>
+      <select id="targetLang">
+        <option value="en">English</option>
+        <option value="ja">Japanese</option>
+        <option value="ko">Korean</option>
+        <option value="zh-Hans">Chinese</option>
+        <option value="bn">Bangla</option>
+        <option value="hi">Hindi</option>
+        <option value="ar">Arabic</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+      </select>
+    </div>
+
+    <button id="translateBtn">Translate Page</button>
+    <button id="restoreBtn" class="restore-btn">Restore Original</button>
+
+    <div class="status" id="statusMessage"></div>
+  </img>
+
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

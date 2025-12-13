@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "Kami Translator",
+  "author": "Tausif Ibne Iqbal",
+  "version": "1.0.0",
+  "description": "Translate text using Microsoft Azure Translator API",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "kami-translator@tausif.dev",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "contextMenus",
+    "storage",
+    "https://api.cognitive.microsofttranslator.com/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "web_accessible_resources": ["config.js"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+    }
+}
