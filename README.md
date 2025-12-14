@@ -12,6 +12,17 @@ A Firefox browser extension that translates web pages using Microsoft Azure Tran
 - 🔍 Right-click to translate selected text
 - ↩️ Restore original text anytime
 
+
+## Preview
+
+<img width="1918" height="912" alt="Preview_1" src="https://github.com/user-attachments/assets/38e2e518-9bdb-4cb3-9bf4-2633eed89717" />
+
+<br>
+
+<img width="1918" height="912" alt="Preview_2" src="https://github.com/user-attachments/assets/1757bb21-bea7-44fc-9f15-60e49af3f12c" />
+
+<br>
+
 ## How to Use
 
 1. **Translate a page**: Click the extension icon, select target language, and click "Translate Page"
@@ -21,14 +32,6 @@ A Firefox browser extension that translates web pages using Microsoft Azure Tran
 
 ## Development
 
-- **Manifest Version**: 2 (Firefox compatible)
-- **Minimum Firefox Version**: 109.0
+- **Manifest Version**: 3 (Firefox compatible)
 - **Permissions**: activeTab, tabs, contextMenus, storage
 
-## Author
-
-Tausif Ibne Iqbal
-
-## License
-
-MIT
