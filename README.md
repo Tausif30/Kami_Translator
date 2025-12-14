@@ -17,7 +17,7 @@ A Firefox browser extension that translates web pages using Microsoft Azure Tran
 
 <img width="1918" height="912" alt="Preview_1" src="https://github.com/user-attachments/assets/38e2e518-9bdb-4cb3-9bf4-2633eed89717" />
 
-<br>
+<br><br><br>
 
 <img width="1918" height="912" alt="Preview_2" src="https://github.com/user-attachments/assets/1757bb21-bea7-44fc-9f15-60e49af3f12c" />
 
